@@ -9,7 +9,7 @@ Errors may occur
 
 ********** Spam Bot **********
 
-English
+-----English-----
 
 Important!!!
 
@@ -29,7 +29,7 @@ After about 4 seconds it should start spamming.
 Make sure that the "spam.py" file in the same folder is with the "spamtext" files
 
 
-German
+-----German-----
 
 Wichtig!!!
 
