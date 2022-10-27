@@ -3,6 +3,9 @@ Spam bot programmed with python.
 
 Sorry for bad english
 
+Note that this is still under development.
+Errors may occur 
+
 
 ********** Spam Bot **********
 
