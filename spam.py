@@ -12,13 +12,12 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
+print(f"{bcolors.OKBLUE}{bcolors.BOLD}Visit github.com/IchHabeEsGesagt/SpamBot for Help{bcolors.ENDC}")
 print(f"{bcolors.HEADER}********************* Spam Bot *********************{bcolors.ENDC}")
 
-
-
 print("Options:")
-
-print("1. I am a Hacker")
+print(" ")
+print("1. Custom Text")
 print("2. Blindtext - 200 Wörter")
 print("3. Blindtext - 500 Wörter")
 print("4. Bee Movie Script")
@@ -28,18 +27,33 @@ option = input("Your Option (1, 2, 3, 4): ")
 
 if option == "1":
 
-    länge = input("For how long? (up to 200sec) ")
-    if int(länge) in range(1, 201):
-        timeout = time.time() + int(länge)
-        time.sleep(5)
-        while True:
-            pyautogui.typewrite("i am a hacker")
-            pyautogui.press("enter")
+    word = input("Put in The custom Text here (up to 50 characters): ")
+    s=len(word)
+    if s in range(50):
 
-            if time.time() > timeout:
-                break
+        length = input("For how long? (up to 200sec): ")
+        timeout = time.time() + int(length)
+        if int(length) in range(1, 201):
+            time.sleep(5)
+            while True:
+                pyautogui.typewrite(word)
+                pyautogui.press("enter")
+
+                if time.time() > timeout:
+                    break
+        else:
+            print(f"{bcolors.FAIL}Max Time: 200sec your time: {length}{bcolors.ENDC}")
+            print(f"Stopping...")
+            time.sleep(2)
+            print(f"{bcolors.BOLD}Stopped!{bcolors.ENDC}")
+            time.sleep(1.3)
     else:
-        print(f"{bcolors.FAIL}Invalid Input{bcolors.ENDC}")
+        print(f"{bcolors.FAIL}Max Character: 50 your length: {s}{bcolors.ENDC}")
+        print(f"Stopping...")
+        time.sleep(2)
+        print(f"{bcolors.BOLD}Stopped!{bcolors.ENDC}")
+        time.sleep(1.3)
+
 
 elif option == "2":
     time.sleep(5)
@@ -65,6 +79,10 @@ elif option == "4":
 
 else:
     print(f"{bcolors.FAIL}Invalid Input{bcolors.ENDC}")
+    print(f"Stopping...")
+    time.sleep(2)
+    print(f"{bcolors.BOLD}Stopped!{bcolors.ENDC}")
+    time.sleep(1.3)
 
 
 
