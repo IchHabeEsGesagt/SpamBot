@@ -18,6 +18,8 @@ Download it on www.python.org
 Right click on spam.py and click on "open with" and click on "select"
 Now you need to direct to where you installed Python. Now choose "Python Launcher" and click on
 "Open" 
+type python3 *path of the file* for mac os or python *path of the file* on windows in the terminal
+
 
 Now you can choose between 4 options
 
